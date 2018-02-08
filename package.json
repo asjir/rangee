@@ -1,0 +1,30 @@
+{
+  "name": "rangee",
+  "version": "1.0.0",
+  "description": "Rangee let you create range representation of your marked representation in HTML (Range DOM object).",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node node_modules/webpack/bin/webpack.js",
+    "demo:watch": "webpack-dev-server --inline --config webpack.config.js --content-base demo --port 8721",
+    "demo:build": "NODE_ENV=production webpack"
+  },
+  "keywords": [ "mark", "highlight", "store", "HTML", "DOM" ],
+  "author": "LukyRada",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "dependencies": {
+    "awesome-typescript-loader": "3.4.1",
+    "typescript": "2.7.1",
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.11.1"
+  },
+  "devDependencies": {
+    "@types/lz-string": "1.3.32",
+    "lz-string": "1.4.4"
+  }
+}
