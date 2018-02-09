@@ -2,14 +2,14 @@
   "name": "rangee",
   "version": "1.0.0",
   "description": "Rangee let you create range representation of your marked representation in HTML (Range DOM object).",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node node_modules/webpack/bin/webpack.js",
     "demo:watch": "webpack-dev-server --inline --config webpack.config.js --content-base demo --port 8721",
     "demo:build": "NODE_ENV=production webpack"
   },
-  "keywords": [ "mark", "highlight", "store", "HTML", "DOM" ],
+  "keywords": [ "range", "mark", "highlight", "store", "HTML", "DOM" ],
   "author": "LukyRada",
   "licenses": [
     {
