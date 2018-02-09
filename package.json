@@ -1,6 +1,6 @@
 {
   "name": "rangee",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Rangee let you create range representation of your marked representation in HTML (Range DOM object).",
   "main": "dist/index.js",
   "scripts": {
