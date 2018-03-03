@@ -2,9 +2,8 @@
 Create range representation of your range representation in HTML (Range DOM object).
 
 ### Typical use case:
-User wants to highlight HTML.
-
-User wants to see the highlighted HTML on next page load.
+1. User wants to highlight HTML.
+2. User wants to see the highlighted HTML on next page load.
 
 ### Example
 ```javascript
