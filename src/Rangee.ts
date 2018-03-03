@@ -3,7 +3,7 @@ import RangeCompressor from './RangeCompressor';
 import RangeEncoder from './RangeEncoder';
 import RangeSerialized from './RangeSerialized';
 
-interface RangeeOptions {
+export interface RangeeOptions {
     document: Document;
 }
 
@@ -49,10 +49,15 @@ class Rangee {
             return [range];
         }
 
+        const documentAsAny = this.options.document as any; // IE does not know the right spec signature for createTreeWalker
+
         // elements
-        const treeWalker = this.options.document.createTreeWalker(range.commonAncestorContainer, NodeFilter.SHOW_ALL, {
-            acceptNode: (node) => NodeFilter.FILTER_ACCEPT
-        })
+        const treeWalker = documentAsAny.createTreeWalker(
+            range.commonAncestorContainer,
+            NodeFilter.SHOW_ALL,
+            (node: Node) => NodeFilter.FILTER_ACCEPT,
+            false
+        ) as TreeWalker
 
         let startFound = false;
         let endFound = false;
@@ -63,7 +68,7 @@ class Rangee {
                 startFound = true;
             }
 
-            if (node.nodeType === Node.TEXT_NODE && startFound && !endFound && node.textContent && node.textContent.length > 0 && node.parentElement && node.parentElement.id !== "highlight") {
+            if (node.nodeType === Node.TEXT_NODE && startFound && !endFound && node.textContent && node.textContent.length > 0) {
                 const newRange = this.options.document.createRange()
                 newRange.setStart(node, node === range.startContainer ? range.startOffset : 0);
                 newRange.setEnd(node, node === range.endContainer ? range.endOffset : (node as Text).length);

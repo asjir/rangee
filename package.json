@@ -1,16 +1,20 @@
 {
   "name": "rangee",
   "version": "1.0.2",
-  "description": "Rangee let you create range representation of your marked representation in HTML (Range DOM object).",
-  "main": "dist/index.js",
+  "description": "Rangee let you create range representation of your selected HTML.",
+  "main": "dist/Rangee.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node node_modules/webpack/bin/webpack.js",
-    "demo:watch": "webpack-dev-server --inline --config webpack.config.js --content-base demo --port 8721",
-    "demo:build": "NODE_ENV=production webpack"
+    "build": "tsc -p ./src"
   },
-  "keywords": [ "range", "mark", "highlight", "store", "HTML", "DOM" ],
-  "author": "LukyRada",
+  "keywords": [
+    "range",
+    "mark",
+    "highlight",
+    "store",
+    "HTML",
+    "DOM"
+  ],
+  "author": "LukasRada",
   "licenses": [
     {
       "type": "MIT",
@@ -18,13 +22,21 @@
     }
   ],
   "dependencies": {
-    "awesome-typescript-loader": "3.4.1",
-    "typescript": "2.7.1",
-    "webpack": "3.10.0",
-    "webpack-dev-server": "2.11.1"
+    "lz-string": "1.4.4",
+    "@types/lz-string": "1.3.32"
   },
   "devDependencies": {
-    "@types/lz-string": "1.3.32",
-    "lz-string": "1.4.4"
+    "awesome-typescript-loader": "3.4.1",
+    "typescript": "2.7.1",
+    "webpack": "4.0.1",
+    "webpack-cli": "2.0.10",
+    "webpack-dev-server": "2.11.1",
+    "mocha": "5.0.0",
+    "should": "13.2.1",
+    "ts-loader": "4.0.1",
+    "path": "0.12.7"
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
   }
 }

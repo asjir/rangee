@@ -1,12 +1,12 @@
 ﻿import HtmlElementSelectorResult from './HtmlElementSelectorResult';
 
-class HtmlElementSelectorGenerator {
+export class HtmlElementSelectorGenerator {
     find = (result: HtmlElementSelectorResult, document: Document): Node => {
-        const element = document.querySelector(result.selector);
+        const element = document.querySelector(result.s);
         if (!element) {
-            throw new Error('Unable to find element with selector: ' + result.selector);
+            throw new Error('Unable to find element with selector: ' + result.s);
         }
-        return element.childNodes[result.childNodeIndex];
+        return element.childNodes[result.c];
     }
 
     generateSelector = (node: Node, relativeTo: Node): HtmlElementSelectorResult => {        
@@ -38,7 +38,7 @@ class HtmlElementSelectorGenerator {
             }
         }        
 
-        return { selector: tagNames.reverse().join(">").toLowerCase(), childNodeIndex: textNodeIndex, offset: 0 };
+        return { s: tagNames.reverse().join(">").toLowerCase(), c: textNodeIndex, o: 0 };
     }
 
     private childNodeIndexOf(parentNode: Node, childNode: Node) {

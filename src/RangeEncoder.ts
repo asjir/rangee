@@ -1,4 +1,4 @@
-﻿class RangeEncoder {
+﻿export class RangeEncoder {
     encode = (buffer: Uint8Array) => btoa(Array.prototype.map.call(buffer, (ch: number) => String.fromCharCode(ch)).join(''))
 
     decode = (base64: string) => {

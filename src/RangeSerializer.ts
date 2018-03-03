@@ -1,20 +1,20 @@
 ﻿import HtmlElementSelectorGenerator from "./HtmlElementSelectorGenerator"
 import RangeSerialized from './RangeSerialized';
 
-class HtmlDocumentRangeSerializer {
+export class HtmlDocumentRangeSerializer {
     serialize(range: Range, relativeTo: HTMLElement): RangeSerialized {
         const start = HtmlElementSelectorGenerator.generateSelector(range.startContainer, relativeTo);
-        start.offset = range.startOffset;
+        start.o = range.startOffset;
         const end = HtmlElementSelectorGenerator.generateSelector(range.endContainer, relativeTo);
-        end.offset = range.endOffset;
+        end.o = range.endOffset;
 
-        return { start, end };
+        return { s: start, e: end };
     }
 
     deserialize(result: RangeSerialized, document: Document): Range {
         const range = document.createRange();
-        let startNode: Node | null = HtmlElementSelectorGenerator.find(result.start, document);
-        let endNode: Node | null = HtmlElementSelectorGenerator.find(result.end, document);
+        let startNode = HtmlElementSelectorGenerator.find(result.s, document);
+        let endNode = HtmlElementSelectorGenerator.find(result.e, document);
 
         if (startNode.nodeType != Node.TEXT_NODE) {
             startNode = startNode.firstChild;
@@ -23,10 +23,10 @@ class HtmlDocumentRangeSerializer {
             endNode = endNode.firstChild;
         }
         if (startNode) {
-            range.setStart(startNode, result.start.offset);
+            range.setStart(startNode, result.s.o);
         }
         if (endNode) {
-            range.setEnd(endNode, result.end.offset);
+            range.setEnd(endNode, result.e.o);
         }        
 
         return range;
