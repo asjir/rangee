@@ -1,5 +1,5 @@
 # rangee
-Create range representation of your range representation in HTML (Range DOM object).
+Create serialized range representation of your selected HTML.
 
 ### Typical use case:
 1. User wants to highlight HTML.
