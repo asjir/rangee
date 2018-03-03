@@ -1,9 +1,10 @@
 import Rangee from './Rangee';
 
 const rangee = new Rangee({ document });
-const storageRangeKey = "range";
 
 const clonedExample = document.querySelector("#demo").cloneNode(true) as HTMLElement;
+
+let rangeRepresentationStorage: Array<string> = [];
 
 document.querySelector("#save").addEventListener("click", () => {
     const selection = document.getSelection();
@@ -13,24 +14,27 @@ document.querySelector("#save").addEventListener("click", () => {
         if (range) {
             const rangeRepresentation = rangee.getEncodedRange(range);
             console.log(rangeRepresentation);
-            sessionStorage.setItem(storageRangeKey, rangeRepresentation);
+            rangeRepresentationStorage.push(rangeRepresentation);
             document.getSelection().removeAllRanges();
         }
     }    
 })
 
 document.querySelector("#load").addEventListener("click", () => {
-    const rangeRepresentation = sessionStorage.getItem(storageRangeKey);
-    if (rangeRepresentation) {
+    rangeRepresentationStorage.forEach(rangeRepresentation => {
         const ranges = rangee.getDecodedRanges(rangeRepresentation);
 
         ranges.forEach(range => {
             const highlight = document.createElement("mark")
             range.surroundContents(document.createElement("mark"));
         })
-    }    
+    })     
 })
 
 document.querySelector("#reset").addEventListener("click", () => {
     document.querySelector("#demo").innerHTML = clonedExample.innerHTML
+})
+
+document.querySelector("#clear").addEventListener("click", () => {
+    rangeRepresentationStorage = []
 })
