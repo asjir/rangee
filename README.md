@@ -14,6 +14,9 @@ Create serialized representation of [Range](https://developer.mozilla.org/en-US/
 ### Scenario 3 - Text highlight over HTML elements with highlight overlaps
 ![Alt Text](https://i.imgur.com/NsBpAJV.gif)
 ***
+## Demo
+https://lukasrada.github.io/rangee/
+***
 ## Under the hood
 ### From Range object to Range string representation
 1. Create array of atomic range objects only with text inside from input range.
@@ -27,7 +30,6 @@ Create serialized representation of [Range](https://developer.mozilla.org/en-US/
 3. Deserialization.
 4. JSON parse.
 5. Array of Range DOM.
-
 ## Demo instalation
 1. Clone repository
 2. Run webpack
