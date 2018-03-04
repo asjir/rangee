@@ -3,6 +3,16 @@
     <title></title>
 </head>
 <body>
+    <h2>Scenario 1 - Basic text highlight</h2
+<img src="https://i.imgur.com/B8DJZ9Q.gif" />
+***
+### Scenario 2 - Text highlight over HTML elements
+![Alt Text](https://i.imgur.com/kNUN0ij.gif)
+***
+### Scenario 3 - Text highlight over HTML elements with highlight overlaps
+![Alt Text](https://i.imgur.com/NsBpAJV.gif)
+***
+    <h2>Example</h2>
     <div>
         <button id="save">Save selected range</button>
         <button id="load">Load selected range</button>
