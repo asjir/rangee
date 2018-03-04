@@ -27,7 +27,7 @@ https://lukasrada.github.io/rangee/
 3. Run node ./demo.js
 4. Visit http://localhost:3000/demo.html
 ***
-## Example
+## Example (store and highlight)
 ```javascript
 import Rangee from './Rangee';
 
