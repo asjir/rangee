@@ -1,6 +1,6 @@
 <div>
     <button onclick="toggleVisibility('#scenario1')">Scenario 1 - Basic text highlight</button>
-    <img id="scenario1" src="https://i.imgur.com/B8DJZ9Q.gif" />
+    <img id="scenario1" style="display: none" src="https://i.imgur.com/B8DJZ9Q.gif" />
 </div>
 <div>
     <button onclick="toggleVisibility('#scenario2')">Scenario 2 - Text highlight over HTML elements</button>
