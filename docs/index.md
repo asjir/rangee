@@ -56,6 +56,6 @@ Istam voluptatem, inquit, Epicurus ignorat?
 
 
     </div>
-    <script src="/dist/demo.js"></script>
+    <script src="https://raw.githubusercontent.com/LukasRada/rangee/master/dist/demo.js"></script>
 </body>
 </html>
