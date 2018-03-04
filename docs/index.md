@@ -4,6 +4,7 @@
 <img src="https://i.imgur.com/kNUN0ij.gif" />
 <h2>Scenario 3 - Text highlight over HTML elements with highlight overlaps</h2>
 <img src="https://i.imgur.com/NsBpAJV.gif" />
+<div>
 <h2>Example</h2>
     <div>
         <button id="save">Save selected range</button>
@@ -20,5 +21,7 @@
             <dt><dfn>Age sane, inquam.</dfn></dt>
             <dd>Habent enim et bene longam et satis litigiosam disputationem.</dd>
         </dl>
+    
 </div>
-    <script src="https://cdn.rawgit.com/LukasRada/rangee/master/dist/demo.js"></script>
+<script src="https://cdn.rawgit.com/LukasRada/rangee/master/dist/demo.js"></script>
+</div>
