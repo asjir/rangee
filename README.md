@@ -3,16 +3,7 @@ Create serialized representation of [Range](https://developer.mozilla.org/en-US/
 ***
 ## Typical use case
 1. User wants to highlight HTML.
-2. User wants to see the highlighted HTML on next page load.
-***
-### Scenario 1 - Basic text highlight
-![Alt Text](https://i.imgur.com/B8DJZ9Q.gif)
-***
-### Scenario 2 - Text highlight over HTML elements
-![Alt Text](https://i.imgur.com/kNUN0ij.gif)
-***
-### Scenario 3 - Text highlight over HTML elements with highlight overlaps
-![Alt Text](https://i.imgur.com/NsBpAJV.gif)
+2. User wants to see the highlighted HTML on next page load (application should store Range representation and apply after page load).
 ***
 ## Demo
 https://lukasrada.github.io/rangee/
