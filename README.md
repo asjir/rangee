@@ -1,5 +1,5 @@
 # rangee
-Create serialized representation of range (Range DOM).
+Create serialized representation of [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range).
 ***
 ## Typical use case
 1. User wants to highlight HTML.
@@ -71,3 +71,4 @@ document.querySelector("#load").addEventListener("click", () => {
 - [x] Basic functionality
 - [ ] Implement LZMA compression
 - [ ] Prepare to npm
+- [ ] Create table of supported browsers
