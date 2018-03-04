@@ -1,11 +1,8 @@
-<h2>Scenario 1 - Basic text highlight</h2>
-<button onclick="toggleVisibility('#scenario1')">toggle visibility</button>
+<button onclick="toggleVisibility('#scenario1')">Scenario 1 - Basic text highlight</button>
 <img id="scenario1" src="https://i.imgur.com/B8DJZ9Q.gif" />
-<h2>Scenario 2 - Text highlight over HTML elements</h2>
-<button onclick="toggleVisibility('#scenario2')">toggle visibility</button>
+<button onclick="toggleVisibility('#scenario2')">Scenario 2 - Text highlight over HTML elements</button>
 <img id="scenario2" style="display: none" src="https://i.imgur.com/kNUN0ij.gif" />
-<h2>Scenario 3 - Text highlight over HTML elements with highlight overlaps</h2>
-<button onclick="toggleVisibility('#scenario3')">toggle visibility</button>
+<button onclick="toggleVisibility('#scenario3')">Scenario 3 - Text highlight over HTML elements with highlight overlaps</button>
 <img id="scenario3" style="display: none" src="https://i.imgur.com/NsBpAJV.gif" />
 <div>
 <h2>Example</h2>
