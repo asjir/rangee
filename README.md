@@ -6,7 +6,7 @@ Create serialized range representation of your selected HTML.
 2. User wants to see the highlighted HTML on next page load.
 ***
 ### Scenario 1
-<div>Basic text highlight</div>                             
+Basic text highlight
 ![Alt Text](https://i.imgur.com/B8DJZ9Q.gif)
 ***
 ### Scenario 2
