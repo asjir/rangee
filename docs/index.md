@@ -1,5 +1,4 @@
-
-    <h2>Scenario 1 - Basic text highlight</h2>
+<h2>Scenario 1 - Basic text highlight</h2>
 <img src="https://i.imgur.com/B8DJZ9Q.gif" />
 <h2>Scenario 2 - Text highlight over HTML elements</h2>
 <img src="https://i.imgur.com/kNUN0ij.gif" />
