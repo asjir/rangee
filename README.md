@@ -1,22 +1,28 @@
 # rangee
 Create serialized range representation of your selected HTML.
-
+***
 ## Typical use case:
 1. User wants to highlight HTML.
 2. User wants to see the highlighted HTML on next page load.
-
+***
 ### Scenario 1
-Basic text highlight
+<div>Basic text highlight</div>                             
 ![Alt Text](https://i.imgur.com/B8DJZ9Q.gif)
-
+***
 ### Scenario 2
 Text highlight over HTML elements
 ![Alt Text](https://i.imgur.com/kNUN0ij.gif)
-
+***
 ### Scenario 3
 Text highlight over HTML elements with highlight overlaps
 ![Alt Text](https://i.imgur.com/NsBpAJV.gif)
-
+***
+## Demo instalation
+1. Clone repository
+2. Run webpack
+3. Run node ./demo.js
+4. Visit http://localhost:3000/demo.html
+***
 ## Example
 ```javascript
 import Rangee from './Rangee';
@@ -50,6 +56,6 @@ document.querySelector("#load").addEventListener("click", () => {
 })
 
 ```
-## Roadmap (is to be done)
+## Roadmap (to be done)
 Basic functionality is fulfilled. Development continue.
 
