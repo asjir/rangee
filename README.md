@@ -15,13 +15,13 @@ Create serialized representation of [Range](https://developer.mozilla.org/en-US/
 ![Alt Text](https://i.imgur.com/NsBpAJV.gif)
 ***
 ## Under the hood
-### From Range DOM to Range string representation
+### From Range object to Range string representation
 1. Create array of atomic range objects only with text inside from input range.
 2. Create HTML selector from array of atomic ranges as JSON.
 3. Serialization.
 4. Compression.
 5. Encoding.
-### From Range string representation to Range DOM
+### From Range string representation to Range object
 1. Decoding.
 2. Decompresion.
 3. Deserialization.
