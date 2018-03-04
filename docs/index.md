@@ -1,17 +1,10 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
-    <h2>Scenario 1 - Basic text highlight</h2
+
+    <h2>Scenario 1 - Basic text highlight</h2>
 <img src="https://i.imgur.com/B8DJZ9Q.gif" />
-***
-### Scenario 2 - Text highlight over HTML elements
-![Alt Text](https://i.imgur.com/kNUN0ij.gif)
-***
-### Scenario 3 - Text highlight over HTML elements with highlight overlaps
-![Alt Text](https://i.imgur.com/NsBpAJV.gif)
-***
+<h2>Scenario 2 - Text highlight over HTML elements</h2>
+<img src="https://i.imgur.com/kNUN0ij.gif" />
+<h2>Scenario 3 - Text highlight over HTML elements with highlight overlaps</h2>
+<img src="https://i.imgur.com/NsBpAJV.gif" />
     <h2>Example</h2>
     <div>
         <button id="save">Save selected range</button>
@@ -67,5 +60,4 @@ Istam voluptatem, inquit, Epicurus ignorat?
 
     </div>
     <script src="https://cdn.rawgit.com/LukasRada/rangee/master/dist/demo.js"></script>
-</body>
-</html>
+
