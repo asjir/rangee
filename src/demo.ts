@@ -21,6 +21,8 @@ document.querySelector("#save").addEventListener("click", () => {
 })
 
 document.querySelector("#load").addEventListener("click", () => {
+    document.querySelector("#demo").innerHTML = clonedExample.innerHTML;
+
     rangeRepresentationStorage.forEach(rangeRepresentation => {
         const ranges = rangee.getDecodedRanges(rangeRepresentation);
 
