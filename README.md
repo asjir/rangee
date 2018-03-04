@@ -5,16 +5,13 @@ Create serialized range representation of your selected HTML.
 1. User wants to highlight HTML.
 2. User wants to see the highlighted HTML on next page load.
 ***
-### Scenario 1
-Basic text highlight
+### Scenario 1 - Basic text highlight
 ![Alt Text](https://i.imgur.com/B8DJZ9Q.gif)
 ***
-### Scenario 2
-Text highlight over HTML elements
+### Scenario 2 - Text highlight over HTML elements
 ![Alt Text](https://i.imgur.com/kNUN0ij.gif)
 ***
-### Scenario 3
-Text highlight over HTML elements with highlight overlaps
+### Scenario 3 - Text highlight over HTML elements with highlight overlaps
 ![Alt Text](https://i.imgur.com/NsBpAJV.gif)
 ***
 ## Demo instalation
