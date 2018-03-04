@@ -66,7 +66,7 @@ Istam voluptatem, inquit, Epicurus ignorat?
 
 
     </div>
-<script src="https://cdn.rawgit.com/LukasRada/rangee/master/dist/demo.js"></script>
+<script src="https://rawgit.com/LukasRada/rangee/master/dist/demo.js"></script>
 <script>
 function toggleVisibility(selector) {
     var element = document.querySelector(selector);    
