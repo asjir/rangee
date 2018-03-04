@@ -67,7 +67,7 @@ document.querySelector("#load").addEventListener("click", () => {
 })
 
 ```
-## Roadmap (to be done)
+## Roadmap
 - [x] Basic functionality
 - [ ] Implement LZMA compression
 - [ ] Prepare to npm
