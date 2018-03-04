@@ -16,4 +16,4 @@
             <li>Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi;</li>
         </ol>
     </div>
-    <script src="../dist/demo.js"></script>
+    <script src="https://raw.githubusercontent.com/LukasRada/rangee/master/dist/demo.js"></script>
