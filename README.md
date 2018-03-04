@@ -1,7 +1,7 @@
 # rangee
 Create serialized representation of range (Range DOM).
 ***
-## Typical use case:
+## Typical use case
 1. User wants to highlight HTML.
 2. User wants to see the highlighted HTML on next page load.
 ***
