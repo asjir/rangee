@@ -1,5 +1,5 @@
 # rangee
-Create serialized range representation of your selected HTML.
+Create serialized representation of range (Range DOM).
 ***
 ## Typical use case:
 1. User wants to highlight HTML.
@@ -14,6 +14,20 @@ Create serialized range representation of your selected HTML.
 ### Scenario 3 - Text highlight over HTML elements with highlight overlaps
 ![Alt Text](https://i.imgur.com/NsBpAJV.gif)
 ***
+## Under the hood
+### From Range DOM to Range string representation
+1. Create array of atomic range objects only with text inside from input range.
+2. Create HTML selector from array of atomic ranges as JSON.
+3. Serialization.
+4. Compression.
+5. Encoding.
+### From Range string representation to Range DOM
+1. Decoding.
+2. Decompresion.
+3. Deserialization.
+4. JSON parse.
+5. Array of Range DOM.
+
 ## Demo instalation
 1. Clone repository
 2. Run webpack
@@ -54,5 +68,6 @@ document.querySelector("#load").addEventListener("click", () => {
 
 ```
 ## Roadmap (to be done)
-Basic functionality is fulfilled. Development continue.
-
+- [x] Basic functionality
+- [ ] Implement LZMA compression
+- [ ] Prepare to npm
