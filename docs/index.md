@@ -1,3 +1,4 @@
+<h1>Scenarios</h1>
 <div>
     <button onclick="toggleVisibility('#scenario1')">Scenario 1 - Basic text highlight</button>
     <img id="scenario1" style="display: none" src="https://i.imgur.com/B8DJZ9Q.gif" />
@@ -11,7 +12,7 @@
     <img id="scenario3" style="display: none" src="https://i.imgur.com/NsBpAJV.gif" />
 </div>
 <div>
-<h2>Example</h2>
+<h1>Example</h1>
     <div>
         <button id="save">Save selected range</button>
         <button id="load">Load selected range</button>
@@ -19,7 +20,7 @@
         <button id="clear">Clear range storage</button>
     </div>
     <div id="demo">
-        <h1>Tum Quintus: Est plane, Piso, ut dicis, inquit.</h1>
+        <h2>Tum Quintus: Est plane, Piso, ut dicis, inquit.</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At eum nihili facit; Quae quo sunt excelsiores, eo dant clariora indicia naturae. Quis enim redargueret? <b>Quia nec honesto quic quam honestius nec turpi turpius.</b> </p>
         <ol>
             <li>Sed tamen enitar et, si minus multa mihi occurrent, non fugiam ista popularia.</li>
