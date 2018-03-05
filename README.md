@@ -17,7 +17,7 @@ https://lukasrada.github.io/rangee/
 5. Encoding.
 ### From Range string representation to Range object
 1. Decoding.
-2. Decompresion.
+2. Decompression.
 3. Deserialization.
 4. JSON parse.
 5. Array of Range DOM.
