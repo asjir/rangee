@@ -1,8 +1,8 @@
-﻿import { compressToUint8Array, decompressFromUint8Array } from 'lz-string';
+﻿import * as Pako from 'pako';
 
 export class RangeCompressor {
-    compress = (decompressed: string) => compressToUint8Array(decompressed);
-    decompress = (compressed: Uint8Array) => decompressFromUint8Array(compressed);
+    compress = (decompressed: string) => Pako.deflateRaw(decompressed)
+    decompress = (compressed: Uint8Array) => Pako.inflateRaw(compressed, { to: 'string' })
 }
 
 export default new RangeCompressor();
