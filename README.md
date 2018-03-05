@@ -55,7 +55,7 @@ document.querySelector("#load").addEventListener("click", () => {
     // highlight range (sub ranges - beacause of HTML structure)
     ranges.forEach(range => {
         const highlight = document.createElement("mark")
-        range.surroundContents(document.createElement("mark"));
+        range.surroundContents(highlight);
     })   
 })
 
