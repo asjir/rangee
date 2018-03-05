@@ -1,5 +1,5 @@
 # rangee
-Serialize representation of [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range) and deserialize back.
+Serialize/deserialize [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range). 
 ***
 ## Typical use case
 1. User wants to highlight HTML.
