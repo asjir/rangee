@@ -2,8 +2,8 @@
 Serialize/deserialize [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range). 
 ***
 ## Typical use case
-1. User wants to highlight HTML.
-2. User wants to see the highlighted HTML on next page load (application should store Range representation and apply after page load).
+1. User wants to highlight text in HTML.
+2. User wants to see the highlighted text in HTML on next page load (application should store Range representation and apply after page load).
 ***
 ## Demo
 https://lukasrada.github.io/rangee/
