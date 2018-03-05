@@ -1,8 +1,8 @@
 {
   "name": "rangee",
-  "version": "1.0.2",
-  "description": "Rangee let you create range representation of your selected HTML.",
-  "main": "dist/Rangee.js",
+  "version": "1.0.3",
+  "description": "Serialize representation of Range and deserialize back.",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc -p ./src"
   },
