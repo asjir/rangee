@@ -1,4 +1,4 @@
-import Rangee from './Rangee';
+import { Rangee }from './Rangee';
 
 const rangee = new Rangee({ document });
 
@@ -10,12 +10,11 @@ document.querySelector("#save").addEventListener("click", () => {
     const selection = document.getSelection();
     if (selection && selection.rangeCount > 0) {
         const range = selection.getRangeAt(0);
-
         if (range) {
             const rangeRepresentation = rangee.getEncodedRange(range);
             console.log(rangeRepresentation);
             rangeRepresentationStorage.push(rangeRepresentation);
-            document.getSelection().removeAllRanges();
+            selection.removeAllRanges();
         }
     }    
 })
@@ -28,7 +27,7 @@ document.querySelector("#load").addEventListener("click", () => {
 
         ranges.forEach(range => {
             const highlight = document.createElement("mark")
-            range.surroundContents(document.createElement("mark"));
+            range.surroundContents(highlight);
         })
     })     
 })

@@ -1,8 +1,4 @@
 ﻿import * as Pako from 'pako';
 
-export class RangeCompressor {
-    compress = (decompressed: string) => Pako.deflateRaw(decompressed)
-    decompress = (compressed: Uint8Array) => Pako.inflateRaw(compressed, { to: 'string' })
-}
-
-export default new RangeCompressor();
+export const compress = (decompressed: string) => Pako.deflateRaw(decompressed, { level: 9, raw: true })
+export const decompress = (compressed: Uint8Array) => Pako.inflate(compressed, { raw: true, to: "string" })

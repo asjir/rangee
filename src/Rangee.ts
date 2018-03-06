@@ -1,13 +1,13 @@
-﻿import RangeSerializer from './RangeSerializer';
-import RangeCompressor from './RangeCompressor';
-import RangeEncoder from './RangeEncoder';
+﻿import { serialize, deserialize } from './RangeSerializer';
+import { compress, decompress } from './RangeCompressor';
+import { encode, decode } from './RangeEncoder';
 import RangeSerialized from './RangeSerialized';
 
 export interface RangeeOptions {
     document: Document;
 }
 
-class Rangee {
+export class Rangee {
     options: Readonly<RangeeOptions>;
 
     constructor(options: RangeeOptions) {
@@ -20,24 +20,24 @@ class Rangee {
         const partialRanges = this.createPartialRanges(range);
 
         const serialized = partialRanges
-            .map((range, index) => RangeSerializer.serialize(range.cloneRange(), this.options.document.body))
-            .map(r => JSON.stringify(r))
+            .map(range => serialize(range.cloneRange(), this.options.document.body))
+            .map(serializedRange => JSON.stringify(serializedRange))
             .join("|");
 
-        const compressed = RangeCompressor.compress(serialized);
-        const encoded = RangeEncoder.encode(compressed);
+        const compressed = compress(serialized);
+        const encoded = encode(compressed);
 
         return encoded;
     }
 
     getDecodedRanges = (representation: string) => {
-        const decoded = RangeEncoder.decode(representation);
-        const decompressed = RangeCompressor.decompress(decoded);
+        const decoded = decode(representation);
+        const decompressed = decompress(decoded);
         const serializedRanges = decompressed
             .split("|")
-            .map(r => JSON.parse(r) as RangeSerialized)
+            .map(decompressedRangeRepresentation => JSON.parse(decompressedRangeRepresentation) as RangeSerialized)
             .reverse()
-            .map(r => RangeSerializer.deserialize(r, this.options.document))
+            .map(serializedRange => deserialize(serializedRange, this.options.document))
         return serializedRanges;
     }
 
@@ -83,5 +83,3 @@ class Rangee {
         return ranges;
     }
 }
-
-export default Rangee

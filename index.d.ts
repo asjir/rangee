@@ -1,13 +1,14 @@
-declare class RangeeOptions {
-    document: Document;
-}
+declare module "rangee" {
+    class RangeeOptions {
+        document: Document;
+    }
+    class Rangee {
+        constructor(options: RangeeOptions);
 
-declare class Rangee {
-    constructor(options: RangeeOptions);
+        getEncodedRange(range: Range): string;
 
-    getEncodedRange(range: Range): string;
+        getDecodedRanges(representation: string): Range[];
 
-    getDecodedRanges(representation: string): Range[];
-
-    getDecodedRanges(range: Range): Range[];
+        getDecodedRanges(range: Range): Range[];
+    }
 }
