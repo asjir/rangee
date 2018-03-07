@@ -62,6 +62,7 @@ document.querySelector("#load").addEventListener("click", () => {
 ```
 ## Roadmap
 - [x] Basic functionality
-- [ ] Implement LZMA compression
+- [ ] ~~Implement LZMA compression~~
+- [x] Implement deflate compression
 - [ ] Prepare to npm
 - [ ] Create table of supported browsers
