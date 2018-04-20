@@ -73,7 +73,7 @@ Istam voluptatem, inquit, Epicurus ignorat?
         }
     }
     </script>
-<script src="https://rawgit.com/LukasRada/rangee/master/dist/demo.js"></script>
+<script data-main="https://rawgit.com/LukasRada/rangee/master/dist/demo" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
 <script>
 function toggleVisibility(selector) {
     var element = document.querySelector(selector);    
