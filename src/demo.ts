@@ -11,7 +11,7 @@ document.querySelector("#save").addEventListener("click", () => {
     if (selection && selection.rangeCount > 0) {
         const range = selection.getRangeAt(0);
         if (range) {
-            const rangeRepresentation = rangee.getEncodedRange(range);
+            const rangeRepresentation = rangee.serializeAtomic(range);
             console.log(rangeRepresentation);
             rangeRepresentationStorage.push(rangeRepresentation);
             selection.removeAllRanges();
@@ -23,9 +23,9 @@ document.querySelector("#load").addEventListener("click", () => {
     document.querySelector("#demo").innerHTML = clonedExample.innerHTML;
 
     rangeRepresentationStorage.forEach(rangeRepresentation => {
-        const ranges = rangee.getDecodedRanges(rangeRepresentation);
+        const ranges = rangee.deserilaizeAtomic(rangeRepresentation);
 
-        ranges.forEach(range => {
+        ranges.reverse().forEach(range => {
             const highlight = document.createElement("mark")
             range.surroundContents(highlight);
         })
