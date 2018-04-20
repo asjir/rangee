@@ -66,7 +66,14 @@ Istam voluptatem, inquit, Epicurus ignorat?
 
 
     </div>
-<script src="https://rawgit.com/LukasRada/rangee/master/dist/demo.min.js"></script>
+    <script>
+    var require = {
+        paths: {
+            "pako": "https://cdnjs.cloudflare.com/ajax/libs/pako/1.0.6/pako.min"    
+        }
+    }
+    </script>
+<script src="https://rawgit.com/LukasRada/rangee/master/dist/demo.js"></script>
 <script>
 function toggleVisibility(selector) {
     var element = document.querySelector(selector);    
