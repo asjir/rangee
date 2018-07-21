@@ -67,9 +67,13 @@ document.querySelector("#load").addEventListener("click", () => {
 - [ ] Create table of supported browsers
 
 ## Supported browsers
-![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/src/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-Latest ✔ | Latest ✔ | 11+ ✔ | Latest ✔ | 6.1+ ✔ |
+<table class="rich-diff-level-zero"> <thead class="rich-diff-level-one"> <tr> <th>
+<a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" style="max-width:100%;"></a><br>IE / Edge</th> <th>
+<a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" style="max-width:100%;"></a><br>Firefox</th> <th>
+<a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" style="max-width:100%;"></a><br>Chrome</th> <th>
+<a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" style="max-width:100%;"></a><br>Safari</th> <th>
+<a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" style="max-width:100%;"></a><br>Opera</th> </tr> </thead> 
+</table>
 
 
 ## Donate
