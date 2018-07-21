@@ -1,5 +1,9 @@
 # rangee
-Serialize/deserialize [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range) in HTML. 
+Serialize/deserialize [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range) in HTML.
+
+Cares about serialization/deserialization only.
+
+Highlighting of text is a matter of your implementation.
 ***
 ## Typical use case
 1. User wants to highlight text in HTML.
@@ -60,8 +64,26 @@ document.querySelector("#load").addEventListener("click", () => {
 })
 
 ```
+## Supported browsers
+<table class="rich-diff-level-zero"> <thead class="rich-diff-level-one"> <tr> <th>
+<a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" style="max-width:100%;"></a><br>IE11 / Edge</th> <th>
+<a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" style="max-width:100%;"></a><br>Firefox</th> <th>
+<a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" style="max-width:100%;"></a><br>Chrome</th> <th>
+<a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" style="max-width:100%;"></a><br>Safari</th> <th>
+<a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" style="max-width:100%;"></a><br>Opera</th> </tr> </thead> 
+</table>
+
 ## Roadmap
 - [x] Basic functionality
 - [x] Implement deflate compression
 - [x] Prepare to npm
-- [ ] Create table of supported browsers
+- [x] Create table of supported browsers
+- [ ] Your idea?
+
+
+## Donate
+If you like rangee then you can support future development, bug fixes, etc. by donatation to BTC or LTC address.
+#### BTC
+`32GrP1ioBpELcVC5QHFpuGe7PqNZs9EUXx`
+#### LTC
+`MEwxUX8tuCeTY5FereWctAjxog6D173Mhc`
