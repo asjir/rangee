@@ -14,7 +14,6 @@
 <div>
 <h1>Example</h1>
     <div>
-        <button id="highlight">Highlight range</button>
         <button id="save">Save selected range</button>
         <button id="load">Load selected range</button>
         <button id="reset">Reset HTML</button>
