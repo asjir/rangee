@@ -13,13 +13,13 @@ export const generateSelector = (node: Node, relativeTo: Node): HtmlElementSelec
     const tagNames = [];
     let textNodeIndex = 0;
     if (node.parentNode) {
-        textNodeIndex = this.childNodeIndexOf(node.parentNode, node);
+        textNodeIndex = childNodeIndexOf(node.parentNode, node);
 
         while (currentNode) {
             const tagName = currentNode.tagName;
 
             if (tagName) {
-                const nthIndex = this.computedNthIndex(currentNode);
+                const nthIndex = computedNthIndex(currentNode);
                 let selector = tagName;
 
                 if (nthIndex > 1) {

@@ -22,6 +22,7 @@ export class Rangee {
             .map(range => serialize(range.cloneRange(), this.options.document.body))
             .map(serializedRange => JSON.stringify(serializedRange))
             .join("|");
+            console.log(serialized)
         const compressed = compress(serialized);
         const encoded = encode(compressed);
         return encoded;

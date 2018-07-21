@@ -2,11 +2,10 @@
   "name": "rangee",
   "version": "1.0.3",
   "description": "Serialize/deserialize Range in HTML.",
-  "main": "dist/index.js",
-  "types": "index.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
-    "build": "tsc ./src/Rangee.ts -outDir ./dist/",
-    "build:demo": "tsc ./src/demo.ts -outDir ./dist/"
+    "build": "type-scripts-build"
   },
   "keywords": [
     "range",
@@ -33,7 +32,8 @@
     "pako": "1.0.6"
   },
   "devDependencies": {
-    "typescript": "2.8.3"
+    "type-scripts": "1.2.0",
+    "typescript": "^2.9.2"
   },
   "optionalDependencies": {
     "fsevents": "*"

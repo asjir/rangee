@@ -1,15 +1,5 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "moduleResolution": "node",
-    "module": "amd",
-    "declaration": false,
-    "outDir": "./dist/",
-    "rootDir": "./src/",
-    "strict": false
-  },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+    "declaration": true
+  }
 }
