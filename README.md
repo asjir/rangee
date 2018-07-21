@@ -1,5 +1,6 @@
 # rangee
-Serialize/deserialize [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range) in HTML. 
+Serialize/deserialize [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range) in HTML.
+Cares about serialization/deserialization only. Highlighting of text is a matter of your implementation.
 ***
 ## Typical use case
 1. User wants to highlight text in HTML.
