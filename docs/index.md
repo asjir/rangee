@@ -76,7 +76,7 @@ Istam voluptatem, inquit, Epicurus ignorat?
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
     <script>
         require(['require', 'https://rawgit.com/LukasRada/rangee/master/build/index.js'], function (require, Rangee) {
-            const rangee = new Rangee.Rangee({ document });
+            const rangee = new Rangee.Rangee({ document: document });
 
             const clonedExample = document.querySelector("#demo").cloneNode(true);
 
