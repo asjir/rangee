@@ -73,7 +73,72 @@ Istam voluptatem, inquit, Epicurus ignorat?
         }
     }
     </script>
-<script data-main="https://rawgit.com/LukasRada/rangee/master/dist/demo" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+    <script>
+        require(['require', 'https://rawgit.com/LukasRada/rangee/master/build/index.js'], function (require, { Rangee }) {
+            const rangee = new Rangee({ document });
+
+            const clonedExample = document.querySelector("#demo").cloneNode(true);
+
+            let rangeRepresentationStorage = [];
+
+            document.querySelector("#select").addEventListener("click", () => {
+                const selection = document.getSelection();
+                if (selection && selection.rangeCount > 0) {
+                    const range = selection.getRangeAt(0);
+                    if (range) {
+                        const rangeRepresentation = rangee.serializeAtomic(range);
+                        console.log(rangeRepresentation);
+                        rangeRepresentationStorage.push(rangeRepresentation);
+                        selection.removeAllRanges();
+                    }
+                    document.querySelector("#demo").innerHTML = clonedExample.innerHTML;
+                    rangeRepresentationStorage.forEach(rangeRepresentation => {
+                        const ranges = rangee.deserilaizeAtomic(rangeRepresentation);
+
+                        ranges.forEach(range => {
+                            const highlight = document.createElement("mark")
+                            range.surroundContents(highlight);
+                        })
+                    }) 
+                }    
+            })
+
+            document.querySelector("#save").addEventListener("click", () => {
+                const selection = document.getSelection();
+                if (selection && selection.rangeCount > 0) {
+                    const range = selection.getRangeAt(0);
+                    if (range) {
+                        const rangeRepresentation = rangee.serializeAtomic(range);
+                        console.log(rangeRepresentation);
+                        rangeRepresentationStorage.push(rangeRepresentation);
+                        selection.removeAllRanges();
+                    }
+                }    
+            })
+
+            document.querySelector("#load").addEventListener("click", () => {
+                document.querySelector("#demo").innerHTML = clonedExample.innerHTML;
+
+                rangeRepresentationStorage.forEach(rangeRepresentation => {
+                    const ranges = rangee.deserilaizeAtomic(rangeRepresentation);
+
+                    ranges.reverse().forEach(range => {
+                        const highlight = document.createElement("mark")
+                        range.surroundContents(highlight);
+                    })
+                })     
+            })
+
+            document.querySelector("#reset").addEventListener("click", () => {
+                document.querySelector("#demo").innerHTML = clonedExample.innerHTML
+            })
+
+            document.querySelector("#clear").addEventListener("click", () => {
+                rangeRepresentationStorage = []
+            })
+        });        
+    </script> 
 <script>
 function toggleVisibility(selector) {
     var element = document.querySelector(selector);    
