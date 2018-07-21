@@ -41,7 +41,7 @@ document.querySelector("#save").addEventListener("click", () => {
         const range = selection.getRangeAt(0);
 
         if (range) {
-            const rangeRepresentation = rangee.getEncodedRange(range);
+            const rangeRepresentation = rangee.serializeAtomic(range);
             rangeStorage = rangeRepresentation;
             // there you have rangee output (range representation in base64) and you can store somewhere
         }
@@ -50,7 +50,7 @@ document.querySelector("#save").addEventListener("click", () => {
 ...
 document.querySelector("#load").addEventListener("click", () => {
     const rangeRepresentation = rangeStorage; // earlier stored range representation
-    const ranges = rangee.getDecodedRanges(rangeRepresentation);
+    const ranges = rangee.deserilaizeAtomic(rangeRepresentation);
 
     // highlight range (sub ranges - beacause of HTML structure)
     ranges.forEach(range => {
