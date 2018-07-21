@@ -79,7 +79,7 @@ export class Rangee {
                 startFound = true;
             }
 
-            if (node.nodeType === Node.TEXT_NODE && startFound && !endFound && node.textContent && node.textContent.length > 0) {
+            if (node.nodeType === Node.TEXT_NODE && startFound && !endFound && node.textContent && node.textContent.trim().length > 0) {
                 const atomicRange = this.options.document.createRange()
                 atomicRange.setStart(node, node === range.startContainer ? range.startOffset : 0);
                 atomicRange.setEnd(node, node === range.endContainer ? range.endOffset : (node as Text).length);
