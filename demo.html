@@ -66,14 +66,14 @@ Istam voluptatem, inquit, Epicurus ignorat?
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
     <script>
-        require(['require', 'build/index'], function (require, { Rangee }) {
-            const rangee = new Rangee({ document });
+        require(['require', 'build/index'], function (require, Rangee) {
+            const rangee = new Rangee.Rangee({ document: document });
 
             const clonedExample = document.querySelector("#demo").cloneNode(true);
 
             let rangeRepresentationStorage = [];
 
-            document.querySelector("#select").addEventListener("click", () => {
+            document.querySelector("#select").addEventListener("click", function() {
                 const selection = document.getSelection();
                 if (selection && selection.rangeCount > 0) {
                     const range = selection.getRangeAt(0);
@@ -84,10 +84,10 @@ Istam voluptatem, inquit, Epicurus ignorat?
                         selection.removeAllRanges();
                     }
                     document.querySelector("#demo").innerHTML = clonedExample.innerHTML;
-                    rangeRepresentationStorage.forEach(rangeRepresentation => {
+                    rangeRepresentationStorage.forEach(function(rangeRepresentation) {
                         const ranges = rangee.deserilaizeAtomic(rangeRepresentation);
 
-                        ranges.forEach(range => {
+                        ranges.forEach(function(range) {
                             const highlight = document.createElement("mark")
                             range.surroundContents(highlight);
                         })
@@ -95,7 +95,7 @@ Istam voluptatem, inquit, Epicurus ignorat?
                 }    
             })
 
-            document.querySelector("#save").addEventListener("click", () => {
+            document.querySelector("#save").addEventListener("click", function() {
                 const selection = document.getSelection();
                 if (selection && selection.rangeCount > 0) {
                     const range = selection.getRangeAt(0);
@@ -108,24 +108,24 @@ Istam voluptatem, inquit, Epicurus ignorat?
                 }    
             })
 
-            document.querySelector("#load").addEventListener("click", () => {
+            document.querySelector("#load").addEventListener("click", function() {
                 document.querySelector("#demo").innerHTML = clonedExample.innerHTML;
 
-                rangeRepresentationStorage.forEach(rangeRepresentation => {
+                rangeRepresentationStorage.forEach(function (rangeRepresentation) {
                     const ranges = rangee.deserilaizeAtomic(rangeRepresentation);
 
-                    ranges.reverse().forEach(range => {
+                    ranges.reverse().forEach(function(range) {
                         const highlight = document.createElement("mark")
                         range.surroundContents(highlight);
                     })
                 })     
             })
 
-            document.querySelector("#reset").addEventListener("click", () => {
+            document.querySelector("#reset").addEventListener("click", function() {
                 document.querySelector("#demo").innerHTML = clonedExample.innerHTML
             })
 
-            document.querySelector("#clear").addEventListener("click", () => {
+            document.querySelector("#clear").addEventListener("click", function() {
                 rangeRepresentationStorage = []
             })
         });        
