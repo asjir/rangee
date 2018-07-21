@@ -65,3 +65,9 @@ document.querySelector("#load").addEventListener("click", () => {
 - [x] Implement deflate compression
 - [x] Prepare to npm
 - [ ] Create table of supported browsers
+## Donate
+If you like rangee then you can support future development, bug fixes, etc. by donatation to BTC or LTC address.
+#### BTC
+`32GrP1ioBpELcVC5QHFpuGe7PqNZs9EUXx`
+#### LTC
+`MEwxUX8tuCeTY5FereWctAjxog6D173Mhc`
