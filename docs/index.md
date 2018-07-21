@@ -14,6 +14,7 @@
 <div>
 <h1>Example</h1>
     <div>
+        <button id="highlight">Highlight range</button>
         <button id="save">Save selected range</button>
         <button id="load">Load selected range</button>
         <button id="reset">Reset HTML</button>
@@ -82,7 +83,7 @@ Istam voluptatem, inquit, Epicurus ignorat?
 
             let rangeRepresentationStorage = [];
 
-            document.querySelector("#select").addEventListener("click", () => {
+            document.querySelector("#highlight").addEventListener("click", () => {
                 const selection = document.getSelection();
                 if (selection && selection.rangeCount > 0) {
                     const range = selection.getRangeAt(0);
