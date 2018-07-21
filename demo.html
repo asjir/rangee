@@ -4,9 +4,8 @@
 </head>
 <body>
     <div>
-        <button id="select">Highlight range</button>
         <button id="save">Save selected range</button>
-        <button id="load">Load selected range</button>
+        <button id="load">Load &amp; highlight saved range</button>
         <button id="reset">Reset HTML</button>
         <button id="clear">Clear range storage</button>
     </div>
@@ -73,28 +72,6 @@ Istam voluptatem, inquit, Epicurus ignorat?
 
             let rangeRepresentationStorage = [];
 
-            document.querySelector("#select").addEventListener("click", function() {
-                const selection = document.getSelection();
-                if (selection && selection.rangeCount > 0) {
-                    const range = selection.getRangeAt(0);
-                    if (range) {
-                        const rangeRepresentation = rangee.serializeAtomic(range);
-                        console.log(rangeRepresentation);
-                        rangeRepresentationStorage.push(rangeRepresentation);
-                        selection.removeAllRanges();
-                    }
-                    document.querySelector("#demo").innerHTML = clonedExample.innerHTML;
-                    rangeRepresentationStorage.forEach(function(rangeRepresentation) {
-                        const ranges = rangee.deserilaizeAtomic(rangeRepresentation);
-
-                        ranges.forEach(function(range) {
-                            const highlight = document.createElement("mark")
-                            range.surroundContents(highlight);
-                        })
-                    }) 
-                }    
-            })
-
             document.querySelector("#save").addEventListener("click", function() {
                 const selection = document.getSelection();
                 if (selection && selection.rangeCount > 0) {
@@ -114,7 +91,7 @@ Istam voluptatem, inquit, Epicurus ignorat?
                 rangeRepresentationStorage.forEach(function (rangeRepresentation) {
                     const ranges = rangee.deserilaizeAtomic(rangeRepresentation);
 
-                    ranges.reverse().forEach(function(range) {
+                    ranges.forEach(function(range) {
                         const highlight = document.createElement("mark")
                         range.surroundContents(highlight);
                     })
