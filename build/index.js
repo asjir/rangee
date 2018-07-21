@@ -139,7 +139,6 @@ var Rangee = /** @class */ (function () {
                 .map(function (range) { return serialize(range.cloneRange(), _this.options.document.body); })
                 .map(function (serializedRange) { return JSON.stringify(serializedRange); })
                 .join("|");
-            console.log(serialized);
             var compressed = compress(serialized);
             var encoded = encode(compressed);
             return encoded;
