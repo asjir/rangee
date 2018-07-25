@@ -82,7 +82,7 @@ document.querySelector("#load").addEventListener("click", () => {
 
 
 ## Donate
-If you like rangee, you can support future development, bug fixes, etc. with BTC or LTC donatation.
+If you like rangee, you can support future development, bug fixes, etc. with BTC or LTC donation.
 #### BTC
 `32GrP1ioBpELcVC5QHFpuGe7PqNZs9EUXx`
 #### LTC
