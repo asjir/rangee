@@ -21,12 +21,7 @@
   "contributors": [
     "krizmaister"
   ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/mit-license.php"
-    }
-  ],
+  "license": "GNU GPLv3",
   "dependencies": {
     "@types/pako": "1.0.0",
     "pako": "1.0.6"
