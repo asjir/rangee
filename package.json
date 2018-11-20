@@ -21,7 +21,7 @@
   "contributors": [
     "krizmaister"
   ],
-  "license": "GNU GPLv3",
+  "license": "MIT",
   "dependencies": {
     "@types/pako": "1.0.0",
     "pako": "1.0.6"
