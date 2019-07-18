@@ -27,7 +27,7 @@ https://lukasrada.github.io/rangee/
 5. Array of Range DOM.
 ## Demo instalation
 1. Clone repository
-2. Run npm i
+2. Run yarn
 3. Run node ./demo.js
 4. Visit http://localhost:3000/demo.html
 ***

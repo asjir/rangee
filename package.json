@@ -1,6 +1,6 @@
 {
   "name": "rangee",
-  "version": "1.0.5",
+  "version": "1.0.10",
   "description": "Serialize/deserialize Range in HTML.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -18,17 +18,14 @@
     "DOM"
   ],
   "author": "LukasRada",
-  "contributors": [
-    "krizmaister"
-  ],
   "license": "MIT",
   "dependencies": {
     "@types/pako": "1.0.0",
-    "pako": "1.0.6"
+    "pako": "1.0.10"
   },
   "devDependencies": {
     "type-scripts": "1.2.1",
-    "typescript": "3.1.2"
+    "typescript": "3.5.3"
   },
   "optionalDependencies": {
     "fsevents": "*"
