@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('pako')) :
-    typeof define === 'function' && define.amd ? define(['exports', 'pako'], factory) :
-    (factory((global.rangee = {}),global.pako));
-}(this, (function (exports,pako) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+    typeof define === 'function' && define.amd ? define(['exports'], factory) :
+    (global = global || self, factory(global.rangee = {}));
+}(this, function (exports) { 'use strict';
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation. All rights reserved.
@@ -116,7 +116,8 @@
         return range;
     };
 
-    var compress = function (decompressed) { return pako.deflateRaw(decompressed, { level: 9, raw: true }); };
+    var pako = require('pako');
+    var compress = function (decompressed) { return pako.deflate(decompressed, { level: 9, raw: true }); };
     var decompress = function (compressed) { return pako.inflate(compressed, { raw: true, to: "string" }); };
 
     var encode = function (buffer) { return btoa(Array.prototype.map.call(buffer, function (ch) { return String.fromCharCode(ch); }).join('')); };
@@ -201,4 +202,4 @@
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));
