@@ -1,4 +1,4 @@
-﻿const pako = require('pako');
+﻿import LZString from 'lz-string'
 
-export const compress = (decompressed: string) => pako.deflate(decompressed, { level: 9, raw: true })
-export const decompress = (compressed: Uint8Array) => pako.inflate(compressed, { raw: true, to: "string" })
+export const compress = (decompressed: string) => LZString.compressToUint8Array(decompressed)
+export const decompress = (compressed: Uint8Array) => LZString.decompressFromUint8Array(compressed)
