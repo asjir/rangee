@@ -10,7 +10,7 @@ Highlighting of text is a matter of your implementation.
 2. User wants to see the highlighted text in HTML on next page load (application should store Range representation and apply after page load).
 ***
 ## Demo
-https://lukasrada.github.io/rangee/
+Comming soon.
 ***
 ## Under the hood
 ### From Range object to Range string representation
@@ -25,11 +25,6 @@ https://lukasrada.github.io/rangee/
 3. Deserialization.
 4. JSON parse.
 5. Array of Range DOM.
-## Demo instalation
-1. Clone repository
-2. Run yarn
-3. Run node ./demo.js
-4. Visit http://localhost:3000/demo.html
 ***
 ## Example (store and highlight)
 ```javascript
