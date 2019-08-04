@@ -1,5 +1,5 @@
 ﻿import { find, generateSelector } from "./HtmlElementSelectorGenerator"
-import RangeSerialized from './RangeSerialized';
+import { RangeSerialized } from './RangeSerialized';
 
 export const serialize = (range: Range, relativeTo: HTMLElement): RangeSerialized => {
     const start = generateSelector(range.startContainer, relativeTo);

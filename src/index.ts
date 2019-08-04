@@ -1,29 +1,41 @@
 ﻿import { serialize, deserialize } from './RangeSerializer';
 import { compress, decompress } from './RangeCompressor';
 import { encode, decode } from './RangeEncoder';
-import RangeSerialized from './RangeSerialized';
+import { RangeSerialized } from './RangeSerialized';
 
 export interface RangeeOptions {
     document: Document;
 }
 
 export class Rangee {
-    options: Readonly<RangeeOptions>;
+    private options: Readonly<RangeeOptions>;
+    private serializationCallback: ((serialized: string) => void) | null
+    private compressionCallback: ((compressed: Uint8Array) => void) | null
 
     constructor(options: RangeeOptions) {
-        this.options = {
-            ...options
-        }
+        this.options = options
+        this.serializationCallback = null
+        this.compressionCallback = null
     }
+
+    onSerialization = (callback: (serialized: string) => void) => this.serializationCallback = callback
+    onCompression = (callback: (compressed: Uint8Array) => void) => this.compressionCallback = callback
 
     serializeAtomic = (range: Range) => {
         const atomicRanges = this.createAtomicRanges(range);
         const serialized = atomicRanges
             .map(range => serialize(range.cloneRange(), this.options.document.body))
             .map(serializedRange => JSON.stringify(serializedRange))
-            .join("|");
+            .join("|")
+
+        this.serializationCallback && this.serializationCallback(serialized)
+
         const compressed = compress(serialized);
+
+        this.compressionCallback && this.compressionCallback(compressed)
+
         const encoded = encode(compressed);
+
         return encoded;
     }
 
@@ -73,7 +85,7 @@ export class Rangee {
         let startFound = false;
         let endFound = false;
         const atomicRanges: Range[] = [];
-        let node: Node;
+        let node: Node | null;
         while (node = treeWalker.nextNode()) {
             if (node === range.startContainer) {
                 startFound = true;
@@ -94,3 +106,10 @@ export class Rangee {
         return atomicRanges;
     }
 }
+
+export * from './HtmlElementSelectorGenerator'
+export * from './HtmlElementSelectorResult'
+export * from './RangeCompressor'
+export * from './RangeEncoder'
+export * from './RangeSerialized'
+export * from './RangeSerializer'

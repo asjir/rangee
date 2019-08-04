@@ -2,3 +2,4 @@
 **/.vs
 /.rpt2_cache
 ./package-lock.json
+dist

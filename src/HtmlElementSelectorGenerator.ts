@@ -1,4 +1,4 @@
-﻿import HtmlElementSelectorResult from './HtmlElementSelectorResult';
+﻿import { HtmlElementSelectorResult } from './HtmlElementSelectorResult';
 
 export const find = (result: HtmlElementSelectorResult, document: Document): Node => {
     const element = document.querySelector(result.s);
