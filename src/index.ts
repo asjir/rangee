@@ -39,7 +39,7 @@ export class Rangee {
         return encoded;
     }
 
-    deserilaizeAtomic = (representation: string) => {
+    deserializeAtomic = (representation: string) => {
         const decoded = decode(representation);
         const decompressed = decompress(decoded);
         const serializedRanges = decompressed
