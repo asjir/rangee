@@ -42,7 +42,7 @@ export class Rangee {
     deserializeAtomic = (representation: string) => {
         const decoded = decode(representation);
         const decompressed = decompress(decoded);
-        const serializedRanges = decompressed
+        const serializedRanges = decompressed!
             .split("|")
             .map(decompressedRangeRepresentation => JSON.parse(decompressedRangeRepresentation) as RangeSerialized)
             .reverse()
@@ -61,7 +61,7 @@ export class Rangee {
     deserialize = (serialized: string) => {
         const decoded = decode(serialized);
         const decompressed = decompress(decoded);
-        const decompressedParsed = JSON.parse(decompressed) as RangeSerialized;
+        const decompressedParsed = JSON.parse(decompressed!) as RangeSerialized;
         const deserilaized = deserialize(decompressedParsed, this.options.document);
         return deserilaized;
     }
