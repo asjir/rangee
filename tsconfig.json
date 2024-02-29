@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "moduleResolution": "classic",
-    "module": "commonjs",
-    "target": "es5",
+    "moduleResolution": "Node",
+    "module": "ES6",
+    "target": "ES6",
     "sourceMap": false,
     "skipDefaultLibCheck": true,
     "esModuleInterop": true,
